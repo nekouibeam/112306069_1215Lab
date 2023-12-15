@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1215Lab</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 10px; /* 距離上邊緣的距離 */
+            left: 10px; /* 距離左邊緣的距離 */
+        }
+
+        .button {
+            padding: 20px 40px;
+            font-size: 20px; 
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <script>
+        var firstNum, secNum;
+        firstNum = window.prompt("Enter one Number: ");
+        secNum = window.prompt("Enter one more Number: ");
+
+        if (firstNum > secNum) {
+            document.body.style.backgroundColor = "lightblue";
+            document.write(firstNum + ' > ' + secNum);
+        } else if (firstNum < secNum) {
+            document.body.style.backgroundColor = "orange";
+            document.write(secNum + ' > ' + firstNum);
+        } else {
+            document.body.style.backgroundColor = "lightyellow";
+            document.write(secNum + ' = ' + firstNum);
+        }
+
+        function buttonClicked1() {
+            alert("first number: " + firstNum);
+        }
+
+        function buttonClicked2() {
+            alert("second number: " + secNum);
+        }
+    </script>
+    <div class="button-container">
+        <button class="button" onclick="buttonClicked1()">按鈕1</button>
+        <button class="button" onclick="buttonClicked2()">按鈕2</button>
+    </div>
+</body>
+
+</html>
